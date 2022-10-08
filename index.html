@@ -17,6 +17,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
 
     <title>Frontend Mentor | Interactive rating component</title>
 
@@ -44,24 +45,26 @@
           Please let us know how we did with your support request. All feedback
           is appreciated to help us improve our offering!
           <div class="point">
-            <div class="num">1</div>
-            <div class="num">2</div>
-            <div class="num">3</div>
-            <div class="num">4</div>
-            <div class="num">5</div>
+            <button class="num" id="first">1</button>
+            <button class="num" id="second">2</button>
+            <button class="num" id="third">3</button>
+            <button class="num" id="fourth">4</button>
+            <button class="num" id="fifth">5</button>
           </div>
         </article>
 
-        <a id="submit" href=""> Submit </a>
+        <a id="submit" href=""> Submit <a/>
       </section>
 
       <!-- Rating state end -->
 
       <!-- Thank you state start -->
 
-      <section class="thank">
+      <section class="thank hidden">
         <img id="card" src="./images/illustration-thank-you.svg" alt="" />
-        <div class="selected">You selected</div>
+        <div class="selected">
+          You selected <span id="score">5</span> our of 5
+        </div>
         <!-- Add rating here -->
         <div class="heading">Thank you!</div>
         <article>
