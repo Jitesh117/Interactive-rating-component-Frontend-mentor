@@ -24,9 +24,6 @@ body {
   padding: 5px;
   margin-bottom: 10px;
 }
-.thank {
-  display: none;
-}
 .title {
   color: white;
 }
@@ -48,22 +45,49 @@ article {
   text-align: center;
   padding-top: 8px;
 }
-#submit{
-    background-color: var(--orange);
-    border-radius: 25px;
-    padding: 5px 0;
-    text-decoration: none;
-    text-align: center;
-    color: white;
+#submit {
+  background-color: var(--orange);
+  border-radius: 25px;
+  padding: 5px 0;
+  text-decoration: none;
+  text-align: center;
+  color: white;
 }
-@media screen and (max-width: 400px) {
   .rating {
-    width: 80%;
+    width: 350px;
     background-color: var(--dblue);
     display: flex;
     flex-direction: column;
-    margin: 40% auto;
+    margin: 100px auto;
     border-radius: 10px;
     padding: 20px;
+    display: none;
+  }
+  .thank {
+    width: 350px;
+    background-color: var(--dblue);
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    /* display: none; */
+  }
+  #card{
+    width: 90px;
+    align-self: center;
+    margin-bottom: 15px;
+  }
+  .heading{
+    color:white;    
+    margin-bottom: 10px;
+  }
+@media screen and (max-width: 400px) {
+  .rating {
+    width: 80%;
+  }
+  .thank {
+    width: 80%;
   }
 }
