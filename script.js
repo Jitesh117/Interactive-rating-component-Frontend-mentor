@@ -1,17 +1,22 @@
-const ratingpage = document.querySelector(".rating");
-const thankyou = document.querySelector(".thank");
-var submitbutton = document.getElementById("submit");
-const ratings = document.querySelectorAll(".num");
-const score = document.getElementById("score");
-if (submitbutton) {
-  submitbutton.addEventListener("click", () => {
-    ratingpage.style.display = "none";
-    thankyou.classList.remove("hidden");
+var button = document.querySelector("#submit");
+var ratings_btn = document.querySelectorAll(".num");
+var rating_state = document.querySelector(".rating");
+var thanks_state = document.querySelector(".thank");
+var selection_rating = document.querySelector("#score");
 
-    ratings.forEach((rating) => {
-      rating.addEventListener("click", () => {
-        score.innerHTML = rating.innerHTML;
-      });
-    });
+var ratingvalue;
+ratings_btn.forEach((element) => {
+  element.addEventListener("click", () => {
+    ratingvalue = element.innerText;
   });
-}
+});
+button.addEventListener("click", () => {
+  if (!ratingvalue) {
+    alert("Select a rating");
+    return;
+  }
+
+  rating_state.style.display = "none";
+  thanks_state.style.display = "block";
+  selection_rating.innerText = ratingvalue;
+});
